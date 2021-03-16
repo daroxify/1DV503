@@ -4,11 +4,11 @@
 
 import PySimpleGUI as sg
 import mysql.connector
-import django
 import csv
 import tables
 from insertdata import insert_into_tables
 from mysql.connector import errorcode
+
 DB_NAME = 'BloodDonation'
 
 ### Creating the database
@@ -189,16 +189,12 @@ while True:
 
             if values['-OPT3-'] == 'Find donors/patients blood type':
                 #OK
-                print("HÄR")
-                print(event)
-                print(values)
                 window['-OPT5-'].update(visible=False)
                 window['-SER-'].update(visible=False)
                 window['-INPUT-'].update(visible=False)
                 window['-VIEW7-'].update(visible=False)
                 window['-OPT6-'].update(visible = False)
                 window['-OPT44-'].update(visible=True)
-                print(window['-OPT44-'].visible)
 
                 if values['-OPT44-'] == 'Donor':
                     window['-SER-'].update(visible=True)
@@ -206,7 +202,6 @@ while True:
                     window['-VIEW7-'].update(visible=True)
                     ID = values['-INPUT-']
                     query = "SELECT ID, name, blood_group FROM donor WHERE ID='" + ID + "'"
-                    print(query)
                     execute_query(query, cursor)
                     for ID, name, bg in cursor:
                         data = "{:25}{:25}{:25}".format(ID, name, bg)
@@ -314,6 +309,7 @@ while True:
                     names.append(data)
                 window['-LIST-'].update(names)
             elif values['-OPT3-'] == 'See who has donated blood X times':
+                #OK
                 window['-INPUT-'].update(visible=True)
                 window['-SER-'].update(visible=True)
                 window['-VIEW8-'].update(visible=True)
