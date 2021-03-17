@@ -74,6 +74,7 @@ except mysql.connector.Error as err:
 print("Database started")
 
 
+### APPLICATION BELOW
 
 def reset():
     window['-VIEW1-'].update(visible=False)

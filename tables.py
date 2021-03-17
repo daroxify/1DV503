@@ -57,9 +57,6 @@ def create_table_blood(cursor):
                 "  `blood_bank` varchar(50) NOT NULL," \
                 "  PRIMARY KEY (`blood_ID`)" \
                 ") ENGINE=InnoDB"
-#"  FOREIGN KEY (`donatedby_ID`) REFERENCES donor(`ID`)," \
-#"  FOREIGN KEY (`givento_ID`) REFERENCES patient(`ID`)" \
-#"  FOREIGN KEY (`blood_bank`) REFERENCES bloodbank(`name`)"\
     
     try:
         print("Creating table blood.")
