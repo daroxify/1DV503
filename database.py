@@ -34,6 +34,7 @@ def execute_query(query, cursor):
         print(err)
 
 ## Starting the database and creating tables
+# If you're using the given .csv files - change the path below!
 try:
     cnx = mysql.connector.connect(user = 'root',
                                     password = 'root',
