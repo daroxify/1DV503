@@ -7,8 +7,9 @@ Use ``pip install PySimleGUI`` to install the GUI.
 If you are using the provided .csv files found in the google drive link, change the path in the ``database.py`` files.
 
 If you are using the provided database dump, import it to your server environment and choose ``utf-8`` as character set of the file.
+All three .py files need to be in the same folder.
 
-Also make sure that the information in code below, in the file database, is correct
+Also make sure that the information in code below, in the file database, is correct.
 ````
 cnx = mysql.connector.connect(user = 'root',
                                     password = 'root',
