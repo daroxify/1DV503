@@ -1,10 +1,10 @@
-### Installation
+## Installation
 The GUI used in the application is ``PySimpleGUI`` and is needed to run the application.
 
 Use ``pip install PySimleGUI`` to install the GUI.  
-
-### How to use the application
-If you are using the provided .csv files, change the path in the ``database.py`` files.
+#
+## How to use the application
+If you are using the provided .csv files found in the google drive link, change the path in the ``database.py`` files.
 
 If you are using the provided database dump, import it to your server environment and choose ``utf-8`` as character set of the file.
 
